@@ -4,21 +4,48 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ember Owl</title>
-<style>
-  :root { color-scheme: light dark; }
-  body { font: 16px/1.55 system-ui, sans-serif; max-width: 720px; margin: 0 auto; padding: 24px 16px 64px; }
-  h1 { font-size: 28px; } h2 { font-size: 20px; margin-top: 32px; }
-</style>
+<meta name="description" content="Ember Owl is a small independent game studio. Our first game: Craft IT, an idle tech tycoon with crafting.">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>Ember Owl</h1>
-<p>Small independent game studio.</p>
-<h2>Craft IT: Idle Tech Tycoon</h2>
-<p>Combine bits and silicon, discover technologies and grow your own IT empire. A crafting puzzle and an idle tycoon in one game for Android.</p>
-<ul>
-<li><a href="craft-it/privacy/">Privacy Policy / Политика конфиденциальности</a></li>
-</ul>
-<h2>Contact</h2>
-<p><a href="mailto:vellum.alcove34@hido.email">vellum.alcove34@hido.email</a></p>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="./"><span class="dot"></span>Ember Owl</a>
+    <nav><a href="craft-it/privacy/">Privacy</a><a href="#contact">Contact</a></nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <h1>Small games<br>with a spark of curiosity</h1>
+    <p>Ember Owl is a small independent studio making cozy games about discovery and building things.</p>
+  </section>
+
+  <article class="game">
+    <img src="assets/craft-it-icon.png" alt="Craft IT icon" width="112" height="112">
+    <div>
+      <h2>Craft IT</h2>
+      <p class="sub">Idle Tech Tycoon</p>
+      <p>Combine bits and silicon, discover technologies from transistors to AI and grow your own IT studio. A crafting puzzle and an idle tycoon in one game.</p>
+      <div class="tags">
+        <span class="tag soon">Coming soon to Google Play</span>
+        <span class="tag">240+ elements</span>
+        <span class="tag">No purchases</span>
+        <span class="tag">8 languages</span>
+      </div>
+      <div class="links"><a href="craft-it/privacy/">Privacy Policy</a><a href="craft-it/privacy/#ru">Политика конфиденциальности</a></div>
+    </div>
+  </article>
+
+  <section class="contact" id="contact">
+    <h3>Contact</h3>
+    <p>Questions, bug reports or ideas: <a href="mailto:vellum.alcove34@hido.email">vellum.alcove34@hido.email</a></p>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Ember Owl</div>
+</footer>
 </body>
 </html>

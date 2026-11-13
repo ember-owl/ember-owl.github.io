@@ -1,62 +1,127 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Craft IT: Privacy Policy / Политика конфиденциальности</title>
+<title>Craft IT: Privacy Policy</title>
+<meta name="description" content="Privacy Policy of the game Craft IT by Ember Owl. Политика конфиденциальности игры Craft IT.">
+<link rel="icon" type="image/png" href="../../assets/favicon.png">
 <style>
-  :root { color-scheme: light dark; }
-  body { font: 16px/1.55 system-ui, sans-serif; max-width: 720px; margin: 0 auto; padding: 24px 16px 64px; }
-  h1 { font-size: 26px; } h2 { font-size: 18px; margin-top: 28px; }
-  nav a { margin-right: 16px; } section { margin-top: 24px; }
+/* Общие стили сайта Ember Owl. Встраиваются в страницу политики при сборке (tools/build_privacy.py). */
+:root {
+  --bg: #f4f6f9;
+  --bg-glow: rgba(14, 158, 138, 0.10);
+  --surface: #ffffff;
+  --border: #dde3ea;
+  --text: #18202b;
+  --muted: #5b6878;
+  --accent: #0e8f7d;
+  --accent-soft: rgba(14, 158, 138, 0.12);
+  --gold: #b7840f;
+  --shadow: 0 1px 2px rgba(16, 24, 40, 0.06), 0 8px 24px rgba(16, 24, 40, 0.06);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b0f17;
+    --bg-glow: rgba(61, 220, 196, 0.10);
+    --surface: #141b27;
+    --border: #232d3d;
+    --text: #e8eef3;
+    --muted: #9aa8b5;
+    --accent: #3ddcc4;
+    --accent-soft: rgba(61, 220, 196, 0.12);
+    --gold: #ffc23d;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.25);
+    color-scheme: dark;
+  }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: radial-gradient(900px 420px at 50% -120px, var(--bg-glow), transparent 70%), var(--bg);
+  color: var(--text);
+  font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  min-height: 100vh;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+
+/* Шапка */
+.top { border-bottom: 1px solid var(--border); }
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; height: 60px; }
+.brand { display: flex; align-items: center; gap: 10px; color: var(--text); font-weight: 700; letter-spacing: 0.2px; }
+.brand:hover { text-decoration: none; }
+.brand .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 12px var(--gold); }
+.top nav { display: flex; gap: 4px; }
+.top nav a { color: var(--muted); padding: 6px 10px; border-radius: 8px; font-size: 14px; }
+.top nav a:hover, .top nav a.on { color: var(--text); background: var(--accent-soft); text-decoration: none; }
+
+/* Главная */
+.hero { padding: 56px 0 24px; }
+.hero h1 { font-size: clamp(30px, 6vw, 42px); line-height: 1.15; margin: 0 0 12px; }
+.hero p { color: var(--muted); font-size: 18px; margin: 0; max-width: 560px; }
+
+.game {
+  display: grid; grid-template-columns: 112px 1fr; gap: 20px; align-items: center;
+  background: var(--surface); border: 1px solid var(--border); border-radius: 20px;
+  padding: 20px; margin: 32px 0; box-shadow: var(--shadow);
+}
+.game img { width: 112px; height: 112px; border-radius: 24px; display: block; }
+.game h2 { margin: 0 0 4px; font-size: 22px; }
+.game .sub { color: var(--accent); font-weight: 600; font-size: 14px; margin: 0 0 8px; }
+.game p { margin: 0 0 14px; color: var(--muted); }
+.tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.tag { font-size: 13px; padding: 4px 10px; border-radius: 999px; background: var(--accent-soft); color: var(--text); }
+.tag.soon { background: transparent; border: 1px solid var(--gold); color: var(--gold); }
+.links { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 14px; font-size: 15px; }
+
+@media (max-width: 520px) {
+  .game { grid-template-columns: 1fr; text-align: left; }
+  .game img { width: 88px; height: 88px; border-radius: 20px; }
+}
+
+.contact { padding: 8px 0 32px; color: var(--muted); }
+.contact h3 { color: var(--text); font-size: 16px; margin: 0 0 4px; }
+
+footer { border-top: 1px solid var(--border); color: var(--muted); font-size: 13px; padding: 20px 0 40px; }
+
+/* Документ (политика) */
+.doc { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 8px 28px 24px; margin: 32px 0; box-shadow: var(--shadow); }
+.doc + .doc { margin-top: 20px; }
+.doc h1 { font-size: 26px; line-height: 1.2; margin: 24px 0 8px; }
+.doc h2 { font-size: 18px; margin: 28px 0 8px; padding-top: 8px; }
+.doc p, .doc li { color: var(--text); }
+.doc > p:nth-of-type(-n+2) { color: var(--muted); margin: 4px 0; }
+.doc ul { padding-left: 22px; }
+.doc li { margin: 6px 0; }
+.doc li::marker { color: var(--accent); }
+.doc a { word-break: break-word; }
+.doc-head { display: flex; align-items: center; gap: 14px; margin-top: 32px; }
+.doc-head img { width: 56px; height: 56px; border-radius: 14px; }
+.doc-head strong { display: block; font-size: 18px; }
+.doc-head span { color: var(--muted); font-size: 14px; }
+@media (max-width: 520px) { .doc { padding: 4px 18px 18px; border-radius: 16px; } }
+
 </style>
 </head>
 <body>
-<nav><a href="#ru">Русский</a><a href="#en">English</a></nav>
-<section id="ru" lang="ru">
-<h1>Политика конфиденциальности</h1>
-<p>Игра «Craft IT». Редакция от 11 ноября 2026 года.</p>
-<p>Разработчик: Ember Owl (Dmitrii). Связь: vellum.alcove34@hido.email.</p>
-<h2>Коротко</h2>
-<ul>
-<li>В игре нет собственных учётных записей и регистрации.</li>
-<li>Прогресс хранится на вашем устройстве. Его копия может храниться в вашем аккаунте Google: в резервной копии телефона и, если вы войдёте в Google Play Игры, в облачном сохранении.</li>
-<li>Мы не просим имя, почту, телефон, не читаем контакты, фотографии, сообщения и не определяем местоположение.</li>
-<li>Версия без рекламы не отправляет данные о вас на наши серверы: у нас нет серверов.</li>
-</ul>
-<h2>Какие данные хранятся на устройстве</h2>
-<ul>
-<li>Сохранение игры: элементы, проекты, специалисты, достижения и время последнего сохранения. Время нужно, чтобы посчитать доход за время, пока вас не было, и защитить его от перевода часов.</li>
-<li>Настройки: язык, тема, звук, музыка, вибрация, уведомления.</li>
-</ul>
-<p>Эти данные лежат в памяти приложения и недоступны другим приложениям. Мы не получаем к ним доступ. Удалить их можно в Настройках кнопкой «Удалить прогресс» или удалением игры с устройства.</p>
-<h2>Резервная копия и облачное сохранение</h2>
-<ul>
-<li>Резервная копия Android. Если в настройках телефона включено резервное копирование, Android сам копирует сохранение и настройки игры в ваш аккаунт Google и восстанавливает их при переустановке или на новом телефоне. Запланированные уведомления и данные рекламы не копируются. Отключить копирование можно в настройках телефона.</li>
-<li>Google Play Игры (по желанию). Если вы войдёте в Google Play Игры, сохранение игры хранится в вашем аккаунте Google Play Игр, чтобы его можно было продолжить на другом устройстве. Игра видит только ваше имя игрока в Play Играх; адрес почты мы не получаем и на своих серверах ничего не храним. Данные обрабатывает Google по своей политике: https://policies.google.com/privacy. Удалить облачные данные игры можно в настройках Google Play Игр.</li>
-</ul>
-<h2>Уведомления</h2>
-<p>Игра может показывать локальные уведомления (специалист вышел на работу, курс завершён, начался высокий спрос). Они создаются на самом устройстве, без серверов. Отключить их можно в Настройках игры или в настройках системы.</p>
-<h2>Разрешения</h2>
-<ul>
-<li>Уведомления: чтобы показывать напоминания, о которых сказано выше.</li>
-<li>Вибрация: для отклика на действия в игре.</li>
-<li>Запуск после перезагрузки: чтобы восстановить запланированные напоминания.</li>
-</ul>
-<h2>Реклама</h2>
-<p>Рекламу за награду показывает Google AdMob. Рекламная сеть может получать и обрабатывать рекламный идентификатор устройства, IP-адрес, сведения об устройстве и о показах рекламы, чтобы показывать и учитывать рекламу. Она работает по собственной политике: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>. В регионах, где это требуется (например, Европейский союз), перед рекламой показывается окно согласия, и выбор можно изменить позже. Изменить выбор можно в Настройках игры → «Настройки рекламы» (пункт появляется там, где это требуется). Реклама показывается только по вашему желанию, за награду. В игре нет покупок за деньги.</p>
-<p>В версии для компьютера реклама не показывается, и этот раздел к ней не относится.</p>
-<h2>Дети</h2>
-<p>Игра не предназначена для детей младше 13 лет, и мы сознательно не собираем данные детей. Если вы считаете, что ребёнок передал данные через рекламу, напишите нам, и мы поможем решить вопрос.</p>
-<h2>Передача данных третьим лицам</h2>
-<p>Мы не продаём и не передаём ваши данные. Исключение составляют рекламная сеть и сервисы Google для резервной копии и облачного сохранения, как описано выше.</p>
-<h2>Ваши права</h2>
-<p>Вы можете в любой момент удалить данные игры на устройстве (см. выше), а облачное сохранение — в настройках Google Play Игр. По вопросам доступа, исправления и удаления данных, которые могла обработать рекламная сеть, обращайтесь к ней по ссылке выше или к нам по адресу связи.</p>
-<h2>Изменения</h2>
-<p>Если политика изменится, новая редакция появится в игре и на странице магазина с новой датой.</p>
-</section>
-<hr>
-<section id="en" lang="en">
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../../"><span class="dot"></span>Ember Owl</a>
+    <nav><a href="#en">English</a><a href="#ru">Русский</a></nav>
+  </div>
+</header>
+<main class="wrap">
+  <div class="doc-head">
+    <img src="../../assets/craft-it-icon.png" alt="" width="56" height="56">
+    <div><strong>Craft IT</strong><span>Privacy Policy · Политика конфиденциальности</span></div>
+  </div>
+  <section class="doc" id="en" lang="en">
 <h1>Privacy Policy</h1>
 <p>Game: &quot;Craft IT&quot;. Version of November 11, 2026.</p>
 <p>Developer: Ember Owl (Dmitrii). Contact: vellum.alcove34@hido.email.</p>
@@ -97,6 +162,52 @@
 <p>You can delete the game&#x27;s data on your device at any time (see above), and the cloud save in Google Play Games settings. For access, correction or deletion of data an ad network may have processed, contact the network via the link above or us at the contact address.</p>
 <h2>Changes</h2>
 <p>If this policy changes, the new version will appear in the game and on the store page with a new date.</p>
-</section>
+  </section>
+  <section class="doc" id="ru" lang="ru">
+<h1>Политика конфиденциальности</h1>
+<p>Игра «Craft IT». Редакция от 11 ноября 2026 года.</p>
+<p>Разработчик: Ember Owl (Dmitrii). Связь: vellum.alcove34@hido.email.</p>
+<h2>Коротко</h2>
+<ul>
+<li>В игре нет собственных учётных записей и регистрации.</li>
+<li>Прогресс хранится на вашем устройстве. Его копия может храниться в вашем аккаунте Google: в резервной копии телефона и, если вы войдёте в Google Play Игры, в облачном сохранении.</li>
+<li>Мы не просим имя, почту, телефон, не читаем контакты, фотографии, сообщения и не определяем местоположение.</li>
+<li>Версия без рекламы не отправляет данные о вас на наши серверы: у нас нет серверов.</li>
+</ul>
+<h2>Какие данные хранятся на устройстве</h2>
+<ul>
+<li>Сохранение игры: элементы, проекты, специалисты, достижения и время последнего сохранения. Время нужно, чтобы посчитать доход за время, пока вас не было, и защитить его от перевода часов.</li>
+<li>Настройки: язык, тема, звук, музыка, вибрация, уведомления.</li>
+</ul>
+<p>Эти данные лежат в памяти приложения и недоступны другим приложениям. Мы не получаем к ним доступ. Удалить их можно в Настройках кнопкой «Удалить прогресс» или удалением игры с устройства.</p>
+<h2>Резервная копия и облачное сохранение</h2>
+<ul>
+<li>Резервная копия Android. Если в настройках телефона включено резервное копирование, Android сам копирует сохранение и настройки игры в ваш аккаунт Google и восстанавливает их при переустановке или на новом телефоне. Запланированные уведомления и данные рекламы не копируются. Отключить копирование можно в настройках телефона.</li>
+<li>Google Play Игры (по желанию). Если вы войдёте в Google Play Игры, сохранение игры хранится в вашем аккаунте Google Play Игр, чтобы его можно было продолжить на другом устройстве. Игра видит только ваше имя игрока в Play Играх; адрес почты мы не получаем и на своих серверах ничего не храним. Данные обрабатывает Google по своей политике: https://policies.google.com/privacy. Удалить облачные данные игры можно в настройках Google Play Игр.</li>
+</ul>
+<h2>Уведомления</h2>
+<p>Игра может показывать локальные уведомления (специалист вышел на работу, курс завершён, начался высокий спрос). Они создаются на самом устройстве, без серверов. Отключить их можно в Настройках игры или в настройках системы.</p>
+<h2>Разрешения</h2>
+<ul>
+<li>Уведомления: чтобы показывать напоминания, о которых сказано выше.</li>
+<li>Вибрация: для отклика на действия в игре.</li>
+<li>Запуск после перезагрузки: чтобы восстановить запланированные напоминания.</li>
+</ul>
+<h2>Реклама</h2>
+<p>Рекламу за награду показывает Google AdMob. Рекламная сеть может получать и обрабатывать рекламный идентификатор устройства, IP-адрес, сведения об устройстве и о показах рекламы, чтобы показывать и учитывать рекламу. Она работает по собственной политике: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>. В регионах, где это требуется (например, Европейский союз), перед рекламой показывается окно согласия, и выбор можно изменить позже. Изменить выбор можно в Настройках игры → «Настройки рекламы» (пункт появляется там, где это требуется). Реклама показывается только по вашему желанию, за награду. В игре нет покупок за деньги.</p>
+<p>В версии для компьютера реклама не показывается, и этот раздел к ней не относится.</p>
+<h2>Дети</h2>
+<p>Игра не предназначена для детей младше 13 лет, и мы сознательно не собираем данные детей. Если вы считаете, что ребёнок передал данные через рекламу, напишите нам, и мы поможем решить вопрос.</p>
+<h2>Передача данных третьим лицам</h2>
+<p>Мы не продаём и не передаём ваши данные. Исключение составляют рекламная сеть и сервисы Google для резервной копии и облачного сохранения, как описано выше.</p>
+<h2>Ваши права</h2>
+<p>Вы можете в любой момент удалить данные игры на устройстве (см. выше), а облачное сохранение — в настройках Google Play Игр. По вопросам доступа, исправления и удаления данных, которые могла обработать рекламная сеть, обращайтесь к ней по ссылке выше или к нам по адресу связи.</p>
+<h2>Изменения</h2>
+<p>Если политика изменится, новая редакция появится в игре и на странице магазина с новой датой.</p>
+  </section>
+</main>
+<footer>
+  <div class="wrap">© 2026 Ember Owl · <a href="../../">ember-owl.github.io</a></div>
+</footer>
 </body>
 </html>
